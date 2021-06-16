@@ -10,8 +10,16 @@
       </h1>
       <!--<img th:src="@{/images/pic.jpg}"/>-->
         <h1 th:text="${name}">
-
+                This is substituted text
         </h1>
+      <h1 th:text="${val}">
+          this is displayed
+      </h1>
+      <h2 th:each="list: ${list}">
+          <p th:text="${list}">
+
+          </p>
+      </h2>
 
 </body>
 </html>
