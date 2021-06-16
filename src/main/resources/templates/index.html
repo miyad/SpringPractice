@@ -1,25 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital@1&display=swap" rel="stylesheet">
+    <link th:href="@{/styles/main.css}" rel="stylesheet" />
+
     <title>Title MIyad</title>
 </head>
 <body>
-      <h1>
-        Hi from Miyad!
-      </h1>
-      <!--<img th:src="@{/images/pic.jpg}"/>-->
-        <h1 th:text="${name}">
-                This is substituted text
-        </h1>
-      <h1 th:text="${val}">
-          this is displayed
-      </h1>
-      <h2 th:each="list: ${list}">
-          <p th:text="${list}">
+<div class="main">
+    <h1>
+        Can you check! font f
+    </h1>
+</div>
+<h1>
+    Hi from Miyad!
+</h1>
+<!--<img th:src="@{/images/pic.jpg}"/>-->
+<h1 th:text="${name}">
+    This is substituted text
+</h1>
+<h1 th:text="${val}">
+    this is displayed
+</h1>
+<h2 th:each="val: ${list}">
+    <p th:text="${val}">       <!--- the equivalent C++ expression is for(int val: list){ cout << val <<endl;} -->
 
-          </p>
-      </h2>
+    </p>
+</h2>
 
 </body>
 </html>
